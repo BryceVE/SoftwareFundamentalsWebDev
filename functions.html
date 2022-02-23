@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  function calculateMaths(number1, number2, operation) {
+      if (operation == 'add') {
+        document.getElementById("result").innerHTML = parseInt(number1) + parseInt(number2);
+      } else if (operation == 'subtract') {
+        document.getElementById("result").innerHTML = parseInt(number1) - parseInt(number2);
+      } else if (operation == 'multiply') {
+        document.getElementById("result").innerHTML = parseInt(number1) * parseInt(number2);
+      } else if (operation == 'divide') {
+        if (number2 || number1 === 0) {
+          document.getElementById("result").innerHTML = "Error, Cannot Divide by Zero!";
+        } else {
+          document.getElementById("result").innerHTML = parseInt(number1) / parseInt(number2);
+        }
+      }
+    }
+
+    /*
+    function addNumbers(number1, number2) {
+      document.getElementById("result").innerHTML = parseInt(number1) + parseInt(number2);
+    }
+    function subtractNumbers(number1, number2) {
+      document.getElementById("result").innerHTML = parseInt(number1) - parseInt(number2);
+    }
+    function multiplyNumbers(number1, number2) {
+      document.getElementById("result").innerHTML = parseInt(number1) * parseInt(number2);
+    }
+    function divideNumbers(number1, number2) {
+      if (number2 || number1 === 0) {
+        document.getElementById("result").innerHTML = "Error, Cannot Divide by Zero!";
+      } else {
+        document.getElementById("result").innerHTML = parseInt(number1) / parseInt(number2);
+      }
+    }*/
+
+  </script>
+  <title>Functions Code</title>
+</head>
+<body>
+
+<h1>For Loops - Web Development</h1>
+
+<p id="result"></p>
+
+<form name='loopForm'>
+  <label><input id="firstNumber" type="number"></label>
+  <label><input id="secondNumber" type="number"></label>
+  <p></p>
+  <button onclick="calculateMaths(form.firstNumber.value, form.secondNumber.value, form.operation = 'add')" type="button">Add Numbers</button>
+  <button onclick="calculateMaths(form.firstNumber.value, form.secondNumber.value, form.operation = 'subtract')" type="button">Subtract Numbers</button>
+  <button onclick="calculateMaths(form.firstNumber.value, form.secondNumber.value, form.operation = 'multiply')" type="button">Multiply Numbers</button>
+  <button onclick="calculateMaths(form.firstNumber.value, form.secondNumber.value, form.operation = 'divide')" type="button">Divide Numbers</button>
+</form>
+</body>
+</html>
